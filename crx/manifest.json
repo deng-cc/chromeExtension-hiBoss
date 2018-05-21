@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "报告老板",
+    "description": "报告老板之德阳万达客流汇报信息定制版",
+    "version": "0.1",
+    "icons": {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    "browser_action": {
+        "default_icon": "img/icon.png",
+        "default_title": "hiBoss",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "notifications"
+    ],
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "js/hiBoss.js"
+            ]
+        }
+    ]
+}

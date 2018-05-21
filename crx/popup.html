@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/popup.js"></script>
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/laydate/laydate.js"></script>
+    <style type="text/css">
+        .body {
+            padding: 20px;
+            width: 500px;
+        }
+
+        .form-button {
+            margin: 10px 0;
+        }
+
+        button {
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="body">
+    <div class="form-group">
+        <label>昨日</label>
+        <input type="text" class="form-control" id="total_yesterday" placeholder="单位：人次">
+    </div>
+    <div class="form-group">
+        <label>上周</label>
+        <input type="text" class="form-control" id="total_lastweek" placeholder="单位：人次">
+    </div>
+    <div class="form-group">
+        <label style="display: block;">去年同比</label>
+        <input style="width: 49%;display:inline-block;margin-right: 2%" type="text" class="form-control" id="lastYearWeekday" placeholder="点击选择日期"><input style="width: 49%;display:inline-block;" type="text" class="form-control" id="total_lastYearWeekday" placeholder="单位：人次">
+    </div>
+    <div class="form-button">
+        <button id="reportButton" type="button" class="btn btn-success">报 告 老 板 ！</button>
+    </div>
+    <div class="form-group">
+        <label for="report">报告老板</label>
+        <textarea class="form-control" rows="8" id="report"></textarea>
+    </div>
+    <div class="form-button">
+        <button id="copyButton" type="button" class="btn btn-success copy" data-clipboard-target="#report">一 键 复 制 ！
+        </button>
+    </div>
+    报告老板v0.2 （By Dulk 2018.05.20）
+</div>
+
+</body>
+</html>
